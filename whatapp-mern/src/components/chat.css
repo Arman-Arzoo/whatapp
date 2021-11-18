@@ -82,3 +82,11 @@
   border-radius: 30px;
   border: none;
 }
+.chat__footer > form > button {
+  display: none;
+}
+
+.chat__footer > .MuiSvgIcon-root {
+  margin: 10px;
+  color: gray;
+}
