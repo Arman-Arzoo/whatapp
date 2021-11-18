@@ -22,3 +22,37 @@
   margin-right: 2vw;
   font-size: 24px !important;
 }
+
+/* Sidebar search */
+.sidebar__search {
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  height: 39px;
+  padding: 30px;
+}
+.sidebar__searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 35px;
+  border-radius: 20px;
+}
+
+.sidebar__searchContainer > .MuiSvgIcon-root {
+  margin: 10px;
+  color: gray;
+}
+
+.sidebar__searchContainer > input {
+  border: none;
+  margin-left: 10px;
+  outline-width: 0;
+}
+
+.sidebar__chats {
+  flex: 1;
+  background-color: white;
+  overflow: scroll;
+}
