@@ -9,6 +9,7 @@ export const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__header">
+        <Avatar src="https://avatars.githubusercontent.com/u/51259303?v=4" />
         <div className="sidebar__headerRight">
           <IconButton>
             <DonutLargeIcon />
