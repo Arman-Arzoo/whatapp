@@ -1,10 +1,30 @@
 import React from "react";
 import "./chat.css";
-import SearchOutlined from "@material-ui/icons/SearchOutlined";
+import { SearchOutlined, AttachFile, MoreVert } from "@material-ui/icons";
+import { Avatar, IconButton } from "@material-ui/core";
 export const Chat = () => {
   return (
     <div className="chat">
-      <h1>chat area</h1>
+      <div className="chat__header">
+        <Avatar />
+        <div className="chat__headerInfo">
+          <h3>Room Name</h3>
+          <p>last seen....</p>
+        </div>
+        <div className="chat__headerRight">
+          <IconButton>
+            <SearchOutlined />
+          </IconButton>
+
+          <IconButton>
+            <AttachFile />
+          </IconButton>
+
+          <IconButton>
+            <MoreVert />
+          </IconButton>
+        </div>
+      </div>
     </div>
   );
 };
