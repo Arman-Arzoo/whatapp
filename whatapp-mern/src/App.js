@@ -1,9 +1,12 @@
 import "./App.css";
+import { Chat } from "./components/Chat";
+import { Sidebar } from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Build a What app clone</h1>
+    <div className="app">
+      <Sidebar />
+      <Chat />
     </div>
   );
 }
