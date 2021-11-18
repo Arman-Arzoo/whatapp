@@ -37,9 +37,9 @@ export const Sidebar = () => {
 
       {/* sidebar chat component */}
       <div className="sidebar__chats">
-        <SidebarChat />
-        <SidebarChat />
-        <SidebarChat />
+        <SidebarChat name="Arman Ali" />
+        <SidebarChat name="Room Name" />
+        <SidebarChat name="Room Name" />
       </div>
     </div>
   );

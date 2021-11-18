@@ -16,7 +16,7 @@ export const Chat = () => {
       <div className="chat__header">
         <Avatar />
         <div className="chat__headerInfo">
-          <h3>Room Name</h3>
+          <h3>Arman Ali</h3>
           <p>last seen....</p>
         </div>
         <div className="chat__headerRight">
