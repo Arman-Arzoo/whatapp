@@ -1,30 +1,27 @@
 //importing
 import express from "express";
-import mongoose from "mongoose";
+import cors from "cors";
+import { connectToDb } from "./database/index.js";
+import whatappMessage from "./router/dbMessageHandler.js";
 
 // app config
 const app = express();
 const port = process.env.PORT || 5000;
 
 //middelware
-
+app.use(express.json());
+app.use(cors());
 //DB config
-const dburl = process.env.MONGODB_URL;
+connectToDb();
 
-mongoose
-  .connect(dburl)
-  .then(() => {
-    console.log("connected to database");
-  })
-  .catch(() => {
-    console.log("could not connect to database");
-  });
 //????
 
 //api route
 app.get("/", (req, res) => {
-  res.status(2000).send("hello world");
+  res.status(200).send("hello world");
 });
+
+app.use("/message", whatappMessage);
 //listening
 app.listen(port, () => {
   console.log(`Listening on localhost: ${port}`);
