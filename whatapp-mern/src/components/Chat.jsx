@@ -9,8 +9,8 @@ import {
 } from "@material-ui/icons";
 import { Avatar, IconButton } from "@material-ui/core";
 import { ChatMessage } from "./ChatMessage.jsx";
-import { ChatReciever } from "./ChatReciever";
-export const Chat = () => {
+
+export const Chat = ({ messages }) => {
   return (
     <div className="chat">
       <div className="chat__header">
@@ -35,10 +35,7 @@ export const Chat = () => {
       </div>
       {/* chat body */}
       <div className="chat__body">
-        <ChatMessage />
-        <ChatMessage />
-        <ChatMessage />
-        <ChatReciever />
+        <ChatMessage messages={messages} />
       </div>
 
       {/* chat footer */}

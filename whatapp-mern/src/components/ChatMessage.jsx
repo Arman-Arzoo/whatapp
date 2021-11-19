@@ -1,11 +1,15 @@
 import React from "react";
 
-export const ChatMessage = () => {
+export const ChatMessage = ({ messages }) => {
   return (
-    <p className="chat__message">
-      <span className="chat__name">arman</span>
-      This is message
-      <span className="chat__timestamp">{new Date().toUTCString()}</span>
-    </p>
+    <>
+      {messages.map((message) => (
+        <p className={`chat__message ${message.received && "chat__reciever"}`}>
+          <span className="chat__name">{message.name}</span>
+          {message.message}
+          <span className="chat__timestamp">{new Date().toUTCString()}</span>
+        </p>
+      ))}
+    </>
   );
 };
