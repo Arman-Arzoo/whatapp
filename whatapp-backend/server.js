@@ -9,8 +9,7 @@ const port = process.env.PORT || 5000;
 //middelware
 
 //DB config
-const dburl =
-  "mongodb+srv://toplinegeeks:toplinegeeks123@cluster0.yzcqn.mongodb.net/whatappdb?retryWrites=true&w=majority";
+const dburl = process.env.MONGODB_URL;
 
 mongoose
   .connect(dburl)
