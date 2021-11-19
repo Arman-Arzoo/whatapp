@@ -8,6 +8,6 @@ const whatAppMsgSchema = mongoose.Schema({
 });
 
 export const whatAppMessage = mongoose.model(
-  "messagecontent",
+  "messagecontents",
   whatAppMsgSchema
 );

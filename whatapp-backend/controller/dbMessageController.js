@@ -11,3 +11,12 @@ export const createMessage = (req, res) => {
     }
   });
 };
+
+export const getMsg = async (req, res) => {
+  try {
+    const msg = await whatAppMessage.find();
+    res.send(msg);
+  } catch (error) {
+    res.status("404").send("can't find post Server error");
+  }
+};
