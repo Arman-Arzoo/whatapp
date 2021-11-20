@@ -20,7 +20,7 @@ export const Chat = ({ messages }) => {
     await axios.post("/message/new", {
       message: input,
       name: "arman",
-      timeStamp: "recently",
+      timeStamp: "just now..",
       recieved: false,
     });
     setInput("");
